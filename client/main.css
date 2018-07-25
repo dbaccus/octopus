@@ -1,4 +1,6 @@
 body {
   padding: 10px;
   font-family: sans-serif;
+  background-color: #cccccc;
+  background-image: url("../imports/images/octopus.png");
 }
