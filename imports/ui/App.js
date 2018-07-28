@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
-import OpportunityList from './components/OpportunityList';
+import OpportunityList from './components/OpportunityList.js';
 
-class App extends Component {
+export default class App extends Component {
   render () {
     return (
-      <div>
+      <div className="container">
+        <header>
+          <h1>Octopus</h1>
+        </header>
+
         <OpportunityList />
       </div>
     );
   }
-};
-
-export default App;
+}

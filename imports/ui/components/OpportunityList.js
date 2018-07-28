@@ -1,24 +1,30 @@
 // This container is a list of the pre-qualified stocks/positions
 // The component is the parent for each stocks's analyst details
-import React from 'react';
-import OpportunityDetail from './OpportunityDetail';
+import React, { Component } from 'react';
+import { withTracker } from 'meteor/react-meteor-data';
 
-const OPPORTUNITIES = [
-  { _id: '1', company: 'abc', ticker: 'cba', ask: '33.33', category: 'value', score: '9.9' },
-  { _id: '2', company: 'def', ticker: 'fed', ask: '33.33', category: 'growth', score: '9.8' },
-  { _id: '3', company: 'xyz', ticker: 'zyx', ask: '33.33', category: 'value', score: '9.7' }
-];
+import { Opportunities } from '../../api/opportunities.js';
 
-const OpportunityList = () => {
-  const RenderOpportunity = OPPORTUNITIES.map(opportunity =>
-    <OpportunityDetail key={opportunity._id} opportunity={opportunity} />
-  );
+import Opportunity from './Opportunity.js';
 
-  return (
-    <ul className="media-list list-group">
-      {RenderOpportunity}
-    </ul>
-  );
-};
+class OpportunityList extends Component {
+  renderOpportunities() {
+    return this.props.opportunities.map((opportunity) => (
+    <Opportunity key={opportunity._id} opportunity={opportunity} />
+    ));
+  }
 
-export default OpportunityList;
+  render() {
+    return (
+      <ul className="media-list list-group">
+        {this.renderOpportunities()}
+      </ul>
+    );
+  }
+}
+
+export default withTracker(() => {
+  return {
+    opportunities: Opportunities.find({}).fetch(),
+  };
+})(OpportunityList);
