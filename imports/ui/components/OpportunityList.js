@@ -1,5 +1,4 @@
-// This container is a list of the pre-qualified stocks/positions
-// The component is the parent for each stocks's analyst details
+// This container is a list of the pre-qualified stocks/positions; The component is the parent for each stocks's analyst details
 import React, { Component } from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 

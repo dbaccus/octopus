@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import OpportunityList from './components/OpportunityList.js';
+import FinanceList from './components/FinanceList.js';
 
 export default class App extends Component {
   render () {

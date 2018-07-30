@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.51",
-    "google-finance": "^0.1.11",
+    "alphavantage": "^1.1.1",
     "meteor-node-stubs": "^0.4.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@meteorjs/eslint-config-meteor": "^1.0.5",
     "babel-eslint": "^8.2.6",
-    "eslint": "^5.1.0",
+    "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-import-resolver-meteor": "^0.4.0",
     "eslint-plugin-import": "^2.13.0",
