@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 
 import OpportunityList from './components/OpportunityList.js';
-import FinanceList from './components/FinanceList.js';
+import FinancialsList from './components/FinancialsList.js';
 
 export default class App extends Component {
+  // componentWillMount() {
+  //   const alpha = require('alphavantage')({ key: 'qweqweqwe' });
+  //
+  //   alpha.data.intraday('msft').then(financials => console.log(financials));
+  // }
+
   render () {
     return (
       <div className="container">
@@ -12,6 +18,7 @@ export default class App extends Component {
         </header>
 
         <OpportunityList />
+        <FinancialsList />
       </div>
     );
   }
