@@ -1,5 +1,6 @@
 // This parent component is a container that displays a list of the pre-qualified stocks/positions.
 import React, { Component } from 'react';
+import axios from 'axios';
 // import FINANCIALS from '../../api/financials.js';
 import Financial from './Financial.js';
 
@@ -10,6 +11,14 @@ const FINANCIALS = [
 ];
 
 export default class FinancialsList extends Component {
+  componentWillMount() {
+    axios.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&apikey=demo')
+    .then(response => console.log(response));
+  // const alpha = require('alphavantage')({ key: 'qweqweqwe' });
+  //
+  // alpha.data.intraday('msft').then(financials => console.log(financials));
+  }
+
   renderFinancials() {
     return FINANCIALS.map(financial =>
     <Financial key={financial.date} financial={financial} />
