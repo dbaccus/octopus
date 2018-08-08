@@ -11,9 +11,15 @@ const FINANCIALS = [
 ];
 
 export default class FinancialsList extends Component {
+  constructor(props) {
+      super(props);
+
+      this.state = { financials: [] };
+  }
+
   componentWillMount() {
     axios.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT&apikey=demo')
-    .then(response => console.log(response));
+    .then(response => this.setState({ financials: response.data }));
   // const alpha = require('alphavantage')({ key: 'qweqweqwe' });
   //
   // alpha.data.intraday('msft').then(financials => console.log(financials));
@@ -26,6 +32,8 @@ export default class FinancialsList extends Component {
   }
 
   render() {
+    console.log(this.state.financials);
+    console.log(this.state.financials.length);
     return (
       <ul className="media-list list-group">
         {this.renderFinancials()}
