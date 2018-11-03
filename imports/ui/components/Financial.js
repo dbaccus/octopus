@@ -6,9 +6,6 @@ export default class Financial extends Component {
     return (
       <li className="media list-group-item">
         <div className="media-body">
-          {this.props.financial.date}
-        </div>
-        <div className="media-body">
           {this.props.financial.open}
         </div>
         <div className="media-body">
@@ -19,6 +16,9 @@ export default class Financial extends Component {
         </div>
         <div className="media-body">
           {this.props.financial.close}
+        </div>
+        <div className="media-body">
+          {this.props.financial.volume}
         </div>
       </li>
     );

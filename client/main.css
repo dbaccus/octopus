@@ -1,6 +1,31 @@
 body {
   padding: 10px;
   font-family: sans-serif;
+}
+
+.kanbanBoard {
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+}
+
+.flowColumn {
+  padding: 5px 2px 5px 2px;
   background-color: #cccccc;
-  background-image: url("../imports/images/octopus.png");
+  width: auto;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.opportunityCard {
+  width: 300px;
+  height: 185px;
+}
+
+.opportunityOptions {
+  display: flex;
+}
+
+.ignoreOption {
+  padding-left: 10px;
 }

@@ -5,7 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import { Opportunities } from '../../api/opportunities.js';
 import Opportunity from './Opportunity.js';
 
-class OpportunityList extends Component {
+class Backlog extends Component {
 
   renderOpportunities() {
     return this.props.opportunities.map((opportunity) => (
@@ -26,6 +26,6 @@ export default withTracker(() => {
   Meteor.subscribe('opportunities');
 
   return {
-    opportunities: Opportunities.find({}).fetch(),
+    opportunities: Opportunities.find({ flowState: 'Trading' }).fetch(),
   };
-})(OpportunityList);
+})(Backlog);

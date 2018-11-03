@@ -13,11 +13,14 @@
     "extends": "@meteorjs/eslint-config-meteor"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-beta.51",
+    "@babel/runtime": "^7.1.2",
     "alphavantage": "^1.1.1",
     "axios": "^0.18.0",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.10",
     "meteor-node-stubs": "^0.4.1",
     "react": "^16.4.1",
+    "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^16.4.1"
   },
   "meteor": {
