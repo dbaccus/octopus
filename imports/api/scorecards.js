@@ -6,7 +6,7 @@ export const ScorecardDefs = {
   currentTarget: { valueDesc: 'Add one point if the current price is below the low target buy price. Subtract one point if the current price exceeds the high target buy price.', growthDesc: 'text' },
   industryGrowth: { valueDesc: 'Add one point if the industry sales growth rate exceeds 15%. Subtract one point if the industry growth rate is less than 3%.', growthDesc: 'text' },
   industryCon: { valueDesc: 'Add one point if the industry has less than four major competitors.', growthDesc: 'text' },
-  bizPlan: { valueDesc: 'Add one point if the current price is below the low target buy price. <br /> Subtract one point if the current price exceeds the high target buy price.', growthDesc: 'text' },
+  bizPlan: { valueDesc: 'Add one point if the current price is below the low target buy price. Subtract one point if the current price exceeds the high target buy price.', growthDesc: 'text' },
   execBoard: { valueDesc: 'Add one point if you rated the Key Executive & Board Quality very good or excellent.', growthDesc: 'text' },
   cleanAcct: { valueDesc: 'Subtract one point if the non-recurring charges percentahe of sales averaged 3% or more over the past five years, or if you judged the earnings growth stability as poor.', growthDesc: 'text' },
   financialHealth: { valueDesc: 'Financial health is a pass or fail test. Disqualify candidates that fail the appropriate test.', growthDesc: 'text' },

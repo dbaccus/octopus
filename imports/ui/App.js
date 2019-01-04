@@ -5,6 +5,9 @@ import Backlog from './components/Backlog.js';
 import Selected from './components/Selected.js';
 import Trading from './components/Trading.js';
 import Closed from './components/Closed.js';
+import Profile from './components/Profile.js';
+import Prequalify from './components/Prequalify.js';
+import Scorecard from './components/Scorecard.js';
 
 // const FlowStates = [
 //   {_id: 1, flowState: 'Backlog'},
@@ -26,7 +29,12 @@ export default class App extends Component {
           <h1>Octopus</h1>
         </header>
 
-        <div className="kanbanBoard">
+        <div>
+          <h2>Component</h2>
+          <Prequalify />
+        </div>
+
+        {/* <div className="kanbanBoard">
           <div className="flowColumn">
             <h4>Backlog</h4>
             <Backlog />
@@ -43,7 +51,7 @@ export default class App extends Component {
             <h4>Closed</h4>
             <Closed />
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
